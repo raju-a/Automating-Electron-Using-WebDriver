@@ -4,34 +4,33 @@ Automating any CEF based application using WebDriver in java, We can achieve thi
 
 ##1. Setup the Environment 
 
-   We need chromeDriver, Download from [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)   
-   have chromedriver in your project 
+   We need chromeDriver, Download from [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) have chromedriver in your project 
 	
 
 ##2. Start ChromeDriver
 
-             ChromeDriverService service = new ChromeDriverService.Builder()
-            .usingDriverExecutable(new File("chromedriver/chromedriver"))
-	        .usingAnyFreePort()
-	        .build();
-                service.start();
+    ChromeDriverService service = new ChromeDriverService.Builder()
+     .usingDriverExecutable(new File("chromedriver/chromedriver"))
+     .usingAnyFreePort()
+     .build();
+      service.start();
 	    
 	
         
 ##3. Setting DesiredCapabilities for chrome
 
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            ChromeOptions options = new ChromeOptions();
-           // The address string should be in the form of "hostname/ip:port". 9222 is the port that you specified                        // in the--remote-debugging-port Chromium 
-            String remoteDebuggingAddress = "localhost:9222";
-	     options.setExperimentalOption("debuggerAddress", remoteDebuggingAddress);
-            capabilities.setCapability(ChromeOptions.CAPABILITY, options)
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+     ChromeOptions options = new ChromeOptions();
+     // The address string should be in the form of "hostname/ip:port". 9222 is the port that you specified                        // in the--remote-debugging-port Chromium 
+     String remoteDebuggingAddress = "localhost:9222";
+     options.setExperimentalOption("debuggerAddress", remoteDebuggingAddress);
+     capabilities.setCapability(ChromeOptions.CAPABILITY, options)
 	   
 	   
         
 ##4. Connect to chrome driver
 
-            // Create a WebDriver instance using URL provided by the ChromeDriverService and capabilities
-             WebDriver driver = new RemoteWebDriver(service.getUrl(), capabilities);
+     // Create a WebDriver instance using URL provided by the ChromeDriverService and capabilities
+      WebDriver driver = new RemoteWebDriver(service.getUrl(), capabilities);
   
 
