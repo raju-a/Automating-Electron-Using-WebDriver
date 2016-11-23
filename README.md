@@ -2,20 +2,20 @@
 Automating any CEF based application using WebDriver in java, We can achieve this in 4 steps.
 
 
-1.  Setup the Environment 
+1. Setup the Environment 
 
          We need chromeDriver, Download from [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)   
          have chromedriver in your project 
 	
 
 
-2. start ChromeDriver
+2. Start ChromeDriver
 
-            ChromeDriverService service = new ChromeDriverService.Builder()
-            .usingDriverExecutable(new File("chromedriver/chromedriver"))
-	    .usingAnyFreePort()
-	    .build();
-             service.start();
+          ChromeDriverService service = new ChromeDriverService.Builder()
+           .usingDriverExecutable(new File("chromedriver/chromedriver"))
+	   .usingAnyFreePort()
+	   .build();
+           service.start();
 	    
 	
         
