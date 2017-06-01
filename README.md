@@ -2,12 +2,12 @@
 Automating any CEF based application using WebDriver in java, We can achieve this in 4 steps.
 
 
-##1. Setup the Environment 
+## 1. Setup the Environment 
 
    We need chromeDriver, Download from [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) 
 	
 
-##2. Start ChromeDriver
+## 2. Start ChromeDriver
 
     ChromeDriverService service = new ChromeDriverService.Builder()
      .usingDriverExecutable(new File("chromedriver/chromedriver"))
@@ -17,7 +17,7 @@ Automating any CEF based application using WebDriver in java, We can achieve thi
 	    
 	
         
-##3. Setting DesiredCapabilities for chrome
+## 3. Setting DesiredCapabilities for chrome
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
      ChromeOptions options = new ChromeOptions();
@@ -28,10 +28,10 @@ Automating any CEF based application using WebDriver in java, We can achieve thi
 	   
 	   
         
-##4. Connect to chrome driver
+## 4. Connect to chrome driver
 
      // Create a WebDriver instance using URL provided by the ChromeDriverService and capabilities
       WebDriver driver = new RemoteWebDriver(service.getUrl(), capabilities);
   
-##Note : 
+## Note : 
  If your application have Multiple pages or windows, You can discover available pages by requesting: http://localhost:9222/json and getting a JSON object with information about inspectable pages.
