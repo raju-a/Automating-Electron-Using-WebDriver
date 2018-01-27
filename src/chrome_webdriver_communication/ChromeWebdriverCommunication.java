@@ -15,7 +15,7 @@ public class ChromeWebdriverCommunication {
 	
 	public void ChromeCommunication() throws IOException{
 		
-		// This will start the chrome 
+		// This will start the ChromeDriverService 
 		ChromeDriverService service = new ChromeDriverService.Builder()
 	        .usingDriverExecutable(new File("chromedriver/chromedriver"))
 	        .usingAnyFreePort()
